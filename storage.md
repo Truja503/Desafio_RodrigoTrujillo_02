@@ -1,5 +1,9 @@
 # Solución de almacenamiento
 
+**Autor:** Rodrigo Trujillo
+
+**Rol:** Especialista de almacenamiento
+
 ## Problema identificado
 
 El servidor principal de InnovaCloud Solutions presenta fallos de disco y opera sin redundancia. Una falla de la unidad que contiene los datos podría interrumpir el servicio y ocasionar pérdida de información.

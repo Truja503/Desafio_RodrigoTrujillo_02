@@ -1,5 +1,9 @@
 # Solución para la gestión de paquetes
 
+**Autor:** Rodrigo Trujillo
+
+**Rol:** Responsable de gestión de paquetes
+
 ## Problema identificado
 
 InnovaCloud Solutions instala software manualmente en sus servidores y máquinas virtuales. Este método favorece diferencias entre versiones, errores al resolver dependencias y descargas repetidas de los mismos paquetes, con consumo innecesario de ancho de banda.

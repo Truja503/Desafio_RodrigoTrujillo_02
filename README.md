@@ -1,5 +1,9 @@
 # Desafío: Optimización de la Infraestructura de Red para InnovaCloud Solutions
 
+**Autor:** Rodrigo Trujillo
+
+**Rol:** Líder e integrador del proyecto
+
 Este repositorio presenta una propuesta técnica para mejorar la continuidad del almacenamiento, la gestión de paquetes, la conectividad de las máquinas virtuales y el diagnóstico de red de InnovaCloud Solutions. La solución se fundamenta principalmente en los contenidos de las semanas 5, 6 y 7 de ASI104 y responde al caso de estudio planteado en la semana 8.
 
 Nombre del repositorio: `Desafio_RodrigoTrujillo_02`
@@ -22,11 +26,7 @@ Nombre del equipo: `RodrigoTrujillo`
 
 | Integrante | Rol | Sección |
 |---|---|---|
-| [Nombre 1] | Líder / Integración | README.md |
-| [Nombre 2] | Especialista de almacenamiento | storage.md |
-| [Nombre 3] | Gestión de paquetes | packages.md |
-| [Nombre 4] | Redes y conectividad | networking.md |
-| [Nombre 5, si aplica] | Diagnóstico | diagnostics.md |
+| Rodrigo Trujillo | Líder y autor del proyecto | README.md, storage.md, packages.md, networking.md y diagnostics.md |
 
 ## Cliente
 

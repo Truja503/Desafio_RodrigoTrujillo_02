@@ -1,5 +1,9 @@
 # Verificación y diagnóstico de red
 
+**Autor:** Rodrigo Trujillo
+
+**Rol:** Responsable de diagnóstico de red
+
 ## Problema identificado
 
 InnovaCloud Solutions no dispone de una secuencia común para comprobar interfaces, direccionamiento, rutas y conectividad. Sin un orden definido, una falla local puede confundirse con un problema del gateway o del destino remoto.

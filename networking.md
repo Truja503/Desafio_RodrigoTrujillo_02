@@ -1,5 +1,9 @@
 # Solución para la configuración de red
 
+**Autor:** Rodrigo Trujillo
+
+**Rol:** Responsable de redes y conectividad
+
 ## Problema identificado
 
 Las máquinas virtuales de InnovaCloud Solutions utilizan el modo NAT predeterminado de VirtualBox. Aunque pueden salir a Internet mediante la dirección del anfitrión, quedan ocultas detrás de este y no tienen la visibilidad directa que requieren los servidores y estaciones de desarrollo dentro de la red corporativa.
