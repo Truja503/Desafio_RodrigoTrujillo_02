@@ -58,9 +58,21 @@ Estos comandos muestran los nodos intermedios observados hasta un destino. Se ut
 
 ### 6. Puertos y servicios
 
-La evaluación solicita identificar puertos abiertos y auditar servicios en ejecución. Sin embargo, los materiales suministrados no incluyen comandos concretos para realizar esas dos tareas. La semana 7 menciona SNMP, NetFlow, Wireshark, Nagios, Zabbix y Grafana como herramientas de análisis o monitoreo, pero no prescribe una herramienta ni una sintaxis para enumerar puertos o servicios.
+Para identificar los puertos TCP y UDP que permanecen en escucha en el servidor, junto con el proceso asociado, se utilizaría:
 
-> **Pendiente de validación con el material de clase:** confirmar con la docente los comandos autorizados para identificar puertos abiertos y auditar servicios en ejecución antes de ampliar este procedimiento. No se incorpora una herramienta externa que no haya sido desarrollada en los materiales proporcionados.
+```bash
+sudo ss -tulpn
+```
+
+Las opciones indican sockets TCP (`-t`), UDP (`-u`), en escucha (`-l`), procesos asociados (`-p`) y valores numéricos para direcciones y puertos (`-n`). La salida permitiría relacionar cada puerto local con el proceso que lo mantiene abierto.
+
+Para auditar los servicios administrados por `systemd` que están en ejecución:
+
+```bash
+systemctl --type=service --state=running
+```
+
+El listado se revisaría para confirmar que cada servicio activo sea necesario para la función del servidor. Un puerto inesperado o un servicio no reconocido requeriría validación antes de modificar su estado.
 
 ## Secuencia recomendada de diagnóstico
 
@@ -73,6 +85,8 @@ ip route
 ping <IP_DESTINO>
 traceroute <IP_DESTINO>
 tracepath <IP_DESTINO>
+sudo ss -tulpn
+systemctl --type=service --state=running
 ```
 
 1. Si la interfaz no aparece o está inactiva, se atiende primero el adaptador y su configuración.
@@ -80,11 +94,10 @@ tracepath <IP_DESTINO>
 3. Si falta una ruta válida, se comprueba el gateway configurado.
 4. Si la configuración local es correcta, `ping` permite probar accesibilidad.
 5. Si el destino no responde o existe una ruta problemática, `traceroute` o `tracepath` permiten examinar el trayecto.
+6. Finalmente, `ss` permite registrar los puertos locales en escucha y `systemctl` los servicios activos.
 
 No es necesario ejecutar ambos comandos de rastreo en todos los casos; se presentan como alternativas disponibles en el material.
 
 ## Resultado esperado
 
-El procedimiento permite registrar, en orden, el nombre y estado de la interfaz, su direccionamiento, las rutas disponibles, la respuesta del destino y el punto hasta el cual avanza el tráfico. Con esta evidencia, el equipo puede distinguir una falla de interfaz, configuración IP, enrutamiento o comunicación remota sin comenzar por herramientas más complejas.
-
-El alcance queda limitado a las comprobaciones respaldadas por el material suministrado. La revisión de puertos y servicios se completará únicamente después de validar en clase las herramientas y los comandos correspondientes.
+El procedimiento permite registrar, en orden, el nombre y estado de la interfaz, su direccionamiento, las rutas disponibles, la respuesta del destino, el punto hasta el cual avanza el tráfico, los puertos locales en escucha y los servicios activos. Con esta evidencia, el equipo puede distinguir una falla de interfaz, configuración IP, enrutamiento o comunicación remota y detectar servicios que necesiten revisión.
