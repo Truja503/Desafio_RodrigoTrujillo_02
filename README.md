@@ -17,6 +17,7 @@ Nombre del repositorio: `Desafio_RodrigoTrujillo_02`
 - Materia: Administración e Implementación de Servicios de Red con Sistemas Operativos Libres
 - Código: ASI104 G03T
 - Docente: Mtra. Ingrid Rubenia Vela Recinos
+- Carnet: TD240434
 
 ## Firma consultora
 
@@ -73,8 +74,6 @@ flowchart LR
 El diagrama representa la solución propuesta; no confirma que estos componentes ya se encuentren implementados.
 
 ## Referencias y uso de herramientas
-
-La propuesta se elaboró principalmente con base en las presentaciones oficiales de las semanas 5, 6, 7 y 8 de la materia ASI104. Estos materiales se consultaron localmente y no se incorporaron al repositorio.
 
 Se utilizó inteligencia artificial (IA) como herramienta de apoyo para estructurar el diagrama Mermaid y presentar ejemplos visuales dentro de los archivos Markdown. El contenido técnico, las decisiones propuestas y la redacción final fueron revisados y adaptados por Rodrigo Trujillo conforme a los materiales de clase y al caso de estudio.
 
